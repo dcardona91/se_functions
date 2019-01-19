@@ -1,0 +1,714 @@
+:root {
+  --dark-blue: #2b3743;
+  --gray-blue: #3e5162;
+  --blue: #4792af;
+  --green: #65a060;
+  --orange: #d18d4c;
+  --yellow: #dbaa21;
+  --brown: #6c5b30;
+  --white: #fff;
+  --gray: #9e9e9e;
+  --black: #31312f;
+  --dark-brown: #47300d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.brown{
+  background: var(--brown)!important;
+}
+
+.blue{
+  background: var(--dark-blue)!important;
+}
+/* blue bar */
+.loading_content {
+  background: var(--brown);
+    z-index: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Shine */
+.loading_content:after {
+  content:'';
+  top:0;
+  transform:translateX(100%);
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index:1;
+  animation: slide 2s infinite;
+  /* 
+  CSS Gradient - complete browser support from https://www.colorzilla.com/gradient-editor/ 
+  */
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(128,186,232,0) 99%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.8)), color-stop(99%,rgba(128,186,232,0)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* IE10+ */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+}
+
+
+#frm_search_zip button{
+  margin: 0;
+  margin-top: 1.5em;
+}
+/* animation */
+
+@keyframes slide {
+  0% {transform:translateX(-200%);}
+  100% {transform:translateX(200%);}
+}
+
+
+.hide {
+  display: none;
+}
+
+.margin-none {
+  margin: 0 !important;
+}
+
+
+.heading-1, .heading-2, .heading-5 {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    padding-top: 30px;
+	padding-bottom: 25px;
+}
+
+.address__info{
+	color: black;
+}
+
+#et-menu > li > ul, #et-menu li > ul, #et-menu > li > ul > li > ul, .et-top-search-primary-menu-item .et-top-search, .et_pb_module, .module, .page article, .authors-page .page, #timeline-sticky-header, .et_extra_other_module, .woocommerce .woocommerce-info {
+    border: none;
+}
+.page article {
+    border: none;
+    margin: 0;
+}
+.page article, .single article {
+    margin: 0;
+    padding: 0;
+    background: inherit;
+    border-radius: 0;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    max-width: 100%;
+}
+
+.margin-top-2 {
+  margin-top: 2rem !important;
+}
+
+.margin-top-3 {
+  margin-top: 3rem;
+}
+
+.margin-bottom-3 {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5rem;
+}
+
+.margin-lfrg-2 {
+  margin: 0 2rem;
+}
+
+.margin-tpbt-3 {
+  margin: 3rem 0;
+}
+
+.margin-tpbt-2 {
+  margin: 2rem auto !important;
+}
+
+.color-white {
+  color: var(--white) !important;
+}
+
+.search_container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.containerNested {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.containerFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heading-1,
+.heading-2,
+.heading-3 {
+  color: var(--dark-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.heading-1 {
+  /*font-size: 2rem;*/
+  font-size: 1.9em;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.heading-2 {
+    font-size: 1.3rem;
+}
+
+.heading-3 {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+}
+
+.description {
+  color: var(--dark-blue);
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 0.9rem;
+  box-shadow: 2px 3px 5px var(--dark-blue)!important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn--green {
+  color: var(--white)!important;
+  background-color: var(--green)!important;
+	margin-top: 25px;
+}
+
+.btn--orange {
+  background-color: var(--orange)!important;;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin: 3rem auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination__item {
+  margin: 0 0.3rem;
+}
+
+.pagination__link {
+  color: var(--dark-blue)!important;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.pagination__link--active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.pagination--large .pagination__link {
+  font-size: 1.4rem;
+}
+
+.home__hero,
+.registerCenter {
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.home__hero {
+  position: relative;
+  height: 500px;
+  background-image: url("https://www.recoveryspeakers.com/wp-content/uploads/2018/12/bg-hero.jpg");
+  background-attachment: fixed;
+}
+
+.home__heroInfo {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.opacity_0{
+  opacity: 0;
+}
+
+#btn_frm_adv_search{
+  margin-top: 2.4em;
+height: 40px !important;
+align-self: center;
+}
+
+.home__heroInfoDescription {
+  padding: 0 10%;
+  padding-bottom: 20px;
+}
+
+.search {
+  position: relative;
+  margin-top: 1em;
+}
+
+.search .btn {
+  margin: 1rem 0.5rem;
+}
+
+.search--sidebar .search__field {
+  width: 100%;
+  box-shadow: 2px 3px 5px var(--gray);
+}
+
+.search--sidebar .btn {
+  box-shadow: 2px 3px 5px var(--gray);
+}
+
+.search__field {
+  width: 90%;
+  padding: 0.6rem 0.5rem;
+  border: 0;
+  border-radius: 5px;
+  color: var(--gray-blue);
+  font-size: 1rem;
+  box-shadow: 2px 3px 5px var(--dark-blue);
+}
+
+.search__advancedFields {
+  position: absolute;
+  width: 100%;
+  top: 7.5rem;
+  left: 0;
+  padding: 3rem 0;
+  background-color: var(--dark-blue);
+}
+
+.search__advancedFields::before {
+  position: absolute;
+  top: -20px;
+  left: 60%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 20px solid var(--dark-blue);
+}
+
+.search__advancedFieldsClose {
+  position: absolute;
+  top: 0.5rem;
+  right: 5rem;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.search__groupFields {
+  width: 100%;
+  margin: 1rem;
+  text-align: left;
+}
+
+.search__groupFields label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.search__groupFields select {
+  position: relative;
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--gray-blue);
+  font-size: 0.9rem;
+  box-shadow: 2px 3px 5px var(--dark-blue);
+}
+
+.registerCenter {
+  padding: 5rem 0 3rem;
+  background-image: url("https://www.recoveryspeakers.com/wp-content/uploads/2018/12/bg-register-center.jpg");
+  background-attachment: fixed;
+  padding-bottom: 80px;
+}
+
+.otherPlacesContainer{
+  transition: opacity .5s ease-in;
+}
+
+.otherPlacesContainer,
+.premiumPlacesContanier {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.premiumPlacesItem {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  margin: 1rem 0;
+  background-image: url("https://www.recoveryspeakers.com/wp-content/uploads/2018/12/center_background.jpg");
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.premiumPlacesInfo {
+  position: absolute;
+  width: 50.%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.premiumPlacesInfo p{
+  line-height:  1em;
+  font-size: 0.95rem;
+}
+
+.premiumPlacesInfo p ~ span{
+  color: black;
+}
+
+
+.premiumPlacesBtn {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  color: var(--white)!important;
+}
+
+.premiumPlacesBtn:hover {
+  background-color: var(--yellow);
+}
+
+.otherPlacesItem {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-top: 2px solid var(--blue);
+  color: var(--black);
+  box-shadow: 2px 5px 1.5rem var(--gray);
+  background:  var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.otherPlacesItem p.description {
+    font-size: 1rem;
+    line-height: 1rem;
+    flex-grow: 2;
+}
+
+
+.otherPlacesItem span {
+  font-weight: bold;
+}
+
+.recoveryDirectory {
+  text-align: center;
+}
+
+.recoveryDirectoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recoveryDirectoryItem {
+  display: inline-block;
+  width: 100%;
+  margin: 0.5rem 0;
+  color: var(--brown)!important;
+  text-decoration: none;
+}
+
+.recoveryDirectoryItem:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.single__hero {
+  position: relative;
+  height: 400px;
+  background-image: url("https://dev.recoveryspeakers.com/wp-content/uploads/2018/12/center_background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.single__hero::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--orange);
+  opacity: 0.5;
+  content: "";
+}
+
+.single__heroInfo {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+html body #page-container section.single__hero .single__heroInfo p.single__description {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.single__heading {
+  color: var(--dark-blue);
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+html body #page-container .search_container  .single__mainContent {
+  position: relative;
+
+}
+
+html body #page-container .search_container  .single__mainContent .single__mainContent--logo_container{
+width: 180px;
+height: 180px;
+background: white;
+padding: 1em;
+box-shadow: 0px 0px 6px 0 rgba(0,0,0,.5);
+border-radius: 6px;
+margin: 2em auto;
+display: flex;
+}
+
+html body  #page-container .search_container .single__mainContent p {
+    color: #27211d;
+}
+
+html body #page-container .search_container  .single__mainContent .single__mainContent--logo_container img{
+ align-self: center;
+width: 100%;
+}
+
+html body #page-container .search_container  .single__mainContent img {
+  max-width: 100%;
+}
+
+
+html body #page-container .search_container .single__mainContent .center_detail_list--container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+html body #page-container .search_container .single__mainContent .center_detail_list--container .center_detail_item{
+  padding: 1rem;
+  text-align: left;
+  width: 260px;
+  align-self: flex-start;
+}
+
+html body #page-container .search_container .single__mainContent .center_detail_item ul.single__sidebarList {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+html body #page-container .search_container .single__mainContent .center_detail_item ul.contact__info {
+  margin-right: 2em;
+}
+
+
+
+html body #page-container .search_container .single__mainContent .center_detail_item ul.single__sidebarList li.single__sidebarListItem{
+  padding: 0;
+  margin: 0;
+}
+
+.single__sidebar {
+  width: 100%;
+  padding-top: 2rem;
+  color: rgb(42,54,67);
+  font-weight: 700;
+}
+
+.single__sidebarList {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.single__sidebarListItem {
+	color: var(--black);
+  	margin: 0.8rem 0;
+}
+
+.single__gallery {
+  width: 100%;
+}
+
+#lightgallery a {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#lightgallery img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .search_container {
+    padding: 0 2rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .home__hero {
+    height: 400px;
+  }
+
+  .search .btn {
+    margin: 0 1rem;
+  }
+
+  .search__field {
+    width: auto;
+    background: var(--white)!important;
+  }
+
+  .search__advancedFields {
+    top: 4.5rem;
+  }
+
+  .search__groupFields {
+    width: calc(100% / 3 - 4rem);
+    margin: 1rem 2rem;
+  }
+
+  .premiumPlacesItem,
+  .otherPlacesItem,
+  .recoveryDirectoryItem {
+    width: calc((100% / 2) - 2rem);
+    margin: 1rem;
+  }
+
+  #lightgallery a {
+    width: calc(100% / 2 - 1.5rem);
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  html body #page-container .search_container  .single__mainContent .single__mainContent--logo_container{
+
+
+margin: 0;
+bottom: 100%;
+z-index: 1;
+position: absolute;
+}
+
+
+  .premiumPlacesItem {
+    width: calc((100% / 3) - 2rem);
+  }
+
+  .otherPlacesItem,
+  .recoveryDirectoryItem {
+    width: calc((100% / 4) - 2rem);
+  }
+
+  html body #page-container .search_container  .single__mainContent {
+    width: 70%;
+    padding-top: 2em;
+    margin-top: 2em;
+  }
+
+  .single__sidebar {
+    width: 30%;
+    margin-top: 2em;
+    padding-top: 0;
+    padding-left: 4rem;
+  }
+
+  #lightgallery a {
+    width: calc(100% / 4 - 1.5rem);
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .search_container {
+    padding: 0;
+  }
+
+  .single__hero {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .registerCenter {
+    padding: 6rem 0 4rem;
+  }
+}
